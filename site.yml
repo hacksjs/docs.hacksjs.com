@@ -47,4 +47,4 @@ output:
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    snapshot: true # Always download fresh UI builds.
+    snapshot: true # Always download fresh UI builds. This is required if the bundle's URL never changes between builds.

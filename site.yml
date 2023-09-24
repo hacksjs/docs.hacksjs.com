@@ -1,0 +1,50 @@
+# This file is an "Antora Playbook", ie a configuration file to build, theme,
+# and deploy a whole web site using the Antora static site generator.
+#
+# https://docs.antora.org/antora/latest/playbook/
+
+site:
+  title: Hacks.js
+
+  # The 404 page and sitemap are generated only when a base URL is set:
+  url: https://hacksjs.com
+
+  # The start page for the web site will be the `index.adoc` file in the `pages`
+  # directory of the `ROOT` module of the "home" component.
+  # https://docs.antora.org/antora/latest/page/start-page/#use-default-start-page
+  start_page: home::index.adoc
+
+  # TODO: Allow robots to browser this site, once it is finished.
+  robots: disallow
+
+content:
+  sources:
+
+  # We're using a relative link to the `hacksjs/hacksjs` repository, which must be
+  # cloned locally adjacent to this repository. This allows us to build and test
+  # content changes locally, before committing and publishing them. If we later
+  # deploy web site updates automatically via a CI system, we will need the URL
+  # to be "https://github.com/hacksjs/hacksjs.git".
+  - url: ../hacksjs
+
+    # This is the path, from the repository root, to the content source.
+    start_path: www
+
+    # For this "component", compile versioned documentation from the following
+    # branches:
+    branches: v0/dev
+
+    # Disable the "Edit this page" (on GitHub) link:
+    edit_url: ~
+
+# Output configuration.
+# https://docs.antora.org/antora/latest/playbook/configure-output/
+output:
+  # Clean the build directory before recompiling.
+  clean: true
+  dir: ./dist
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true # Always download fresh UI builds.

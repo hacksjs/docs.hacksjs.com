@@ -1,4 +1,4 @@
-= Hacks.js web site
+= docs.hacksjs.com
 
 This repository encapsulates the code and configuration to compile and publish the https://hacksjs.com/[hacksjs.com web site].
 

@@ -4,4 +4,6 @@ This repository encapsulates the code and configuration to compile and publish t
 
 The web site is built using https://antora.org/[Antora], a specialist static site generator for documentation sites, while builds web pages from AsciiDoc source files.
 
-Antora uses a "playbook" configuration file to control what content is included in a web site build, what the site looks like, and where it is published. In keeping with https://docs.antora.org/antora/latest/playbook/[Antora's best practices], this repository is strictly for Antora playbook configuration. There is no content in this repository. Instead, the content for the Hacks.js web site is pulled from the main https://github.com/hacksjs/hacksjs[hacksjs/hacksjs] code repository, to keep the documentation close to the source code.
+Antora uses a "playbook" configuration file to control what content is included in a web site build, what the site looks like, and where it is published. In keeping with https://docs.antora.org/antora/latest/playbook/[Antora's best practices], this repository is strictly for Antora playbook configuration — the playbook file is called `site.yml` in this repository.
+
+There is no content in this repository. Instead, the content for the Hacks.js web site is pulled from the main https://github.com/hacksjs/hacksjs[hacksjs/hacksjs] code repository, to keep the documentation close to the source code.

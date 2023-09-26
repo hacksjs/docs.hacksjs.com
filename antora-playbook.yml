@@ -7,7 +7,7 @@ site:
   title: Hacks.js
 
   # The 404 page and sitemap are generated only when a base URL is set:
-  url: https://hacksjs.com
+  url: https://docs.hacksjs.com
 
   # The start page for the web site will be the `index.adoc` file in the `pages`
   # directory of the `ROOT` module of the "home" component.
@@ -20,12 +20,26 @@ site:
 content:
   sources:
 
-  # We're using a relative link to the `hacksjs/hacksjs` repository, which must be
-  # cloned locally adjacent to this repository. This allows us to build and test
+  # This local directory contains some general documentation pages —
+  # everything that is not related to a specific package.
+  - url: .
+
+    # This is the path, from the repository root, to the content source.
+    start_path: www
+
+    # For this "component", compile versioned documentation from the following
+    # branches:
+    branches: main
+
+    # Disable the "Edit this page" (on GitHub) link:
+    edit_url: ~
+
+  # We're using a relative link to the `hacksjs/universal` repository, which must
+  # be cloned locally adjacent to this repository. This allows us to build and test
   # content changes locally, before committing and publishing them. If we later
   # deploy web site updates automatically via a CI system, we will need the URL
-  # to be "https://github.com/hacksjs/hacksjs.git".
-  - url: ../hacksjs
+  # to be "https://github.com/hacksjs/universal.git".
+  - url: ../universal
 
     # This is the path, from the repository root, to the content source.
     start_path: www

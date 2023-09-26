@@ -1,0 +1,13 @@
+# This is a "component version descriptor file" for Antora. This file must
+# be included in the root (or "start path") of every content source (or
+# "component") in an Antora playbook.
+#
+# https://docs.antora.org/antora/latest/component-version-descriptor/
+# https://docs.antora.org/antora/latest/component-version/
+
+name: home
+title: Home
+version: ~
+
+nav:
+- modules/ROOT/nav.adoc
